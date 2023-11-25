@@ -45,6 +45,8 @@ def sendMessage(celebrants):
         #only add your number or numbers that are in the numbers dictionary that you dont want to text. If there arent any numbers you dont want to text leave line below as is.
         #textedNumbers = ["+123485435343"]
         textedNumbers = []
+        #this will be used to track how many messages were actually sent.
+        timeWasted  = 0
         # A variable message that has the string we want to insert. INSERT THE MESSAGE YOU WOULD LIKE WITHIN THE QUOTES. ie "Hi all this is a birthday reminder ..."
         # You can use the names variable and pnumbers variable to insert the names and numbers of the celebrants respectively 
         # that would look like "hi all tomorrow is {} birthday(s) you can call/text them at {} number(s)".format(names,pnumbers)
@@ -56,17 +58,23 @@ def sendMessage(celebrants):
             if name not in celebrants and numbers[name] not in textedNumbers:
                 textedNumbers.append(numbers[name])
                 pywhatkit.sendwhatmsg_instantly(numbers[name], message)
+                timeWasted  = timeWasted + 1
                 #this sleep is to give it time to send the message before it tries to text the next person
                 time.sleep(60)
         print("this is the number of numbers texted {}".format(len(textedNumbers)))
         print(textedNumbers)
+        #returns the time wasted assuming it takes a minute to send a message cause of the sleep
+        return timeWasted
 
 def main():
     while True:
         celebrants = findBirthdays()
-        sendMessage(celebrants)
+        timeWasted = sendMessage(celebrants)
+        #gets the timewasted to use to offset the sleep time so that the code runs the same time everyday
+        sleepTime = 86400 - (60 * timeWasted)
         #this sleep is to wait till the next day to run the message
-        time.sleep(86400)
+        time.sleep(sleepTime)
+       
 
 if __name__ == "__main__":
     main()
