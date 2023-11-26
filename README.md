@@ -42,4 +42,4 @@ Running the Code:
 
 To run the code run ```python3 birthday-reminders.py ``` in command line in the directory of the folder.
 
-The code is meant to be run all year round so to stop it you would need to kill its using the ctrl-C.
+The code is meant to be run all year round so to stop it you would need to kill its using the ```ctrl-C```.
