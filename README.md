@@ -24,7 +24,8 @@ Code Modifications:
 You will need to modify some lines of code in the birthday-reminders.py.
 
 Special thing to note: the numbers and birthday dictionaries are in the Key Value pair ```String:String``` and ```String:Date``` respectively. If you have a person Jane Jones whose number is +1234567890 and birthday March 4th make sure that to represent that person that the string that you use for the name match in both dictionaries. So it will look like
-```"Jane Jones":"+!234567890"``` and ```"Jane Jones":Date(2000, 3, 4)```.
+
+```"Jane Jones":"+1234567890"``` and ```"Jane Jones":Date(2000, 3, 4)```.
 
 - ```bithday = {} ```
 
