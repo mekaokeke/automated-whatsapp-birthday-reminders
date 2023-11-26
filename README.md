@@ -10,6 +10,7 @@ Note the code is set to remind people only a day before. So if a persons birthda
 
 Another assumption is that you will be adding your own number and birthday. So that you dont send yourself birthday reminders since the code is using your whatsapp account to be reminding people you will have modify a line of code that will be explained to you later.
 
+
 Prerequisites:
 
 Ensure you have pyhton3 and pip installed as you will need it to install the needed library and run the code.
@@ -21,6 +22,9 @@ You will need to open your default browser and sign into whatsapp. You can run t
 Code Modifications: 
 
 You will need to modify some lines of code in the birthday-reminders.py.
+
+Special thing to note: the numbers and birthday dictionaries are in the Key Value pair ```String:String``` and ```String:Date``` respectively. If you have a person Jane Jones whose number is +1234567890 and birthday March 4th make sure that to represent that person that the string that you use for the name match in both dictionaries. So it will look like
+```"Jane Jones":"+!234567890"``` and ```"Jane Jones":Date(2000, 3, 4)```.
 
 - ```bithday = {} ```
 
