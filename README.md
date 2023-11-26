@@ -36,7 +36,7 @@ You will need to modify some lines of code in the birthday-reminders.py.
 
 - ```message = ""```
 
-this string will contain the message you are sending to all the phone numbers so if you leave this blank you will not be sending out anything. This is MANDATORY! It was left blank for you to be creative with your message. read the comments for more info on how the code has been set up to help you add the names and numbers to your message so that you dont have to.
+  this string will contain the message you are sending to all the phone numbers so if you leave this blank you will not be sending out anything. This is MANDATORY! It was left blank for you to be creative with your message. read the comments for more info on how the code has been set up to help you add the names and numbers to your message so that you dont have to.
   
 Running the Code:
 
