@@ -71,7 +71,10 @@ def main():
         celebrants = findBirthdays()
         timeWasted = sendMessage(celebrants)
         #gets the timewasted to use to offset the sleep time so that the code runs the same time everyday
-        sleepTime = 86400 - (60 * timeWasted)
+        if timeWasted != None:
+            sleepTime = 86400 - (60 * timeWasted)
+        else:
+            sleepTime = 86400
         #this sleep is to wait till the next day to run the message
         time.sleep(sleepTime)
        
