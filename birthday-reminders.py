@@ -59,7 +59,11 @@ def sendMessage(celebrants):
                 textedNumbers.append(numbers[name])
                 pywhatkit.sendwhatmsg_instantly(numbers[name], message)
                 timeWasted  = timeWasted + 1
-                #this sleep is to give it time to send the message before it tries to text the next person
+                #this sleep is to give it time to send the message before it tries to text the next person, it is not required.
+                #I have seen that if you run this as administor on powershell in windows everything works smoothly and all messages get sent and,
+                #you can thus comment the line out and make the necessary changes in the if statement in the main function below.
+                #I have not run it on mac with linux with sudo but running it without root privileges the time helps because if not some messages will get drafted but will not have time to be sent before it tries to send the next one.
+                #however you can always just try it without time.sleep(60) on mac or linux  with or without root privileges and see what happens.
                 time.sleep(60)
         print("this is the number of numbers texted {}".format(len(textedNumbers)))
         print(textedNumbers)
@@ -72,6 +76,7 @@ def main():
         timeWasted = sendMessage(celebrants)
         #gets the timewasted to use to offset the sleep time so that the code runs the same time everyday
         if timeWasted != None:
+            #if you are not using time.sleep(60) above then change the 60 to 17. If you change the above to time.sleep(x) change this 60 to whatever your x is.
             sleepTime = 86400 - (60 * timeWasted)
         else:
             sleepTime = 86400
