@@ -1,5 +1,5 @@
 # automated-whatsapp-birthday-reminders
-code to send automated birthday reminders on what's app using python
+Code to send automated birthday reminders on what's app using python
 
 The assumptions made in the creation of this code is that people within a family or friend group or organization desire to be reminded of each others bithdays. To achieve this this code will have you insert the peoples names and phone numbers as seen on whatsapp ie +1234556677 and create a message that you would want to be sent to others to remind them of fellow members birthdays. Enusre to read the comments in the code and the rest of this readme. 
 
