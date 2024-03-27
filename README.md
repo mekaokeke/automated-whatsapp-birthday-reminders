@@ -27,7 +27,7 @@ Special thing to note: the numbers and birthday dictionaries are in the Key Valu
 
 ```"Jane Jones":"+1234567890"``` and ```"Jane Jones":date(2000, 3, 4)```.
 
-- ```bithday = {} ```
+- ```birthday = {} ```
 
   add all the birthdays here of the the people you want to have reminders of birthdays for in the format specified in the comments in the code. This is MANDATORY!
   
